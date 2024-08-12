@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Nombre del Proyecto 📚
 LibraryControl
 # Descripción del Proyecto 🚀
