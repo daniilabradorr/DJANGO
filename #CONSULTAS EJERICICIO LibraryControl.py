@@ -1,5 +1,5 @@
 #CONSULTAS EJERICIO
-from todos.models import Author, Book, Member, Loan
+from Library.models import Author, Book, Member, Loan
 from datetime import date
 #Consultas Básicas.
 # Consultar todos los autores.

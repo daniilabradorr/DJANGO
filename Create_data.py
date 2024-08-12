@@ -1,4 +1,4 @@
-from todos.models import Author, Book, Member, Loan
+from Library.models import Author, Book, Member, Loan
 
 # Creando autores.
 author1 = Author.objects.create(
