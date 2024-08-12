@@ -1,6 +1,8 @@
-<<<<<<< HEAD
+![Portada del Proyecto](https://imgur.com/yHr1U9q.png)
+
 # Nombre del Proyecto 📚
 LibraryControl
+
 # Descripción del Proyecto 🚀
 Este es un mini proyecto de Django para la gestión de préstamos de libros en una biblioteca. Incluye modelos para autores, libros, miembros y préstamos.Enfocado a practicar y consolidar Django, ya que como vera usted, unicamente se usa Django con Python y SQL lite, sin nada de HTML, etc, pero aun así un paso es un paso. Aquí tiene el mini proyecto.
 
