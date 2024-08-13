@@ -1,7 +1,7 @@
 ![Portada del Proyecto](https://imgur.com/9c9tDle.jpg)
 ¡Bienvenido! 🚀 Este repositorio está dedicado a almacenar los proyectos y ejercicios que realizo mientras aprendo y perfecciono mis habilidades en Django, un increíble framework web en Python 🐍.
 
-Se que se podría incluir en el repositorio de Python pero quiero dividirlo. Ya que hay poryectos que únicamente los hago para practicar DJANGO y otros python y django que esos iran en los dos repositrios.
+Se que se podría incluir en el repositorio de Python pero quiero dividirlo. Ya que hay proyectos que únicamente los hago para practicar DJANGO y otros python y django que esos iran en los dos repositrios.
 
 📂 ¿Qué Contiene Este Repositorio?
 Actualmente, el repositorio incluye:
