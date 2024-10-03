@@ -1,5 +1,5 @@
 # Biblioteca Online 📚
-LAMENTABLEMENTE HE PERDIDO TODO DE ESTE PROYECTO POR LO CUAL ESTO ESTA A CERO. PERO PUEDEN VER TODO LO QUE IMPLEMENTE, APRENDI, ETC.
+## LAMENTABLEMENTE HE PERDIDO TODO DE ESTE PROYECTO POR LO CUAL ESTO ESTA A CERO. PERO PUEDEN VER TODO LO QUE IMPLEMENTE, APRENDI, ETC.
 
 
 Este es mi segundo proyecto práctico básico de HTML y Django, desarrollado con el objetivo de cimentar conocimientos en desarrollo web Full Stack. Durante este proceso, he aprendido y aplicado conceptos fundamentales de Django, HTML, autenticación, formularios, plantillas y más.
