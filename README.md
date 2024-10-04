@@ -10,6 +10,7 @@ Actualmente, el repositorio incluye:
 Un pequeño proyecto de gestión de una biblioteca con libros, autores, préstamos, etc.
 [Conquerblocksproject]:
 Un qupequeño poryecto que imia una pagaina de una entidad educativa cursos, masters, blog, etc.
+
 🔮 Lo Que Va a Contener
 En el futuro, este repositorio se irá llenando de más contenido, como:
 
