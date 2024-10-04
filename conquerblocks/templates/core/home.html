@@ -1,0 +1,45 @@
+{% extends "layout-base.html" %}
+
+{% block head_title %}Página Home{% endblock %}
+
+{% block page_content %}
+  <h1>La escuela líder en habla hispana que revoluciona la educación en tecnología</h1>
+  <p>Da un giro a tu futuro profesional guiado por los mayores referentes del sector</p>
+
+  <h2>Descubre ConquerBlocks</h2>
+  <p>La escuela número 1 en desarrollo de tecnologías emergentes. Conquer Blocks tiene un Máster pensado para ti</p>
+  <p><a href="{% url 'core:about_us' %}">Conoce ConquerBlocks</a></p>
+
+  <h2>Estudia con nosotros</h2>
+  {% for course in courses %}
+    <article id="{{ course.pk }}">
+      <h3>{{ course.title }}</h3>
+      <p>Fecha de creación: {{ course.created_at }}</p>
+      {% if course.course_image %}
+        <picture>
+          <img src="{{ course.course_image.thumbnails.small.url }}" alt="">
+        </picture>
+      {% endif %}
+      <div>
+        {{ course.content|safe|truncatechars:100 }}...
+      </div>
+      <p><a href="{% url 'courses:course_detail' course.pk %}">Ver curso completo</a></p>
+    </article>
+  {% endfor %}
+
+
+  <h2>Últimas noticias</h2>
+  {% for post in posts %}
+    <article id="{{ post.pk }}">
+      <h3>{{ post.title }}</h3>
+      <p>Fecha de publicación: {{ post.created_at }}</p>
+      <div>
+        {{ post.content|safe|truncatechars:100 }}...
+      </div>
+      <p><a href="{% url 'blog:blog_detail' post.pk %}">Ver noticia completa</a></p>
+    </article>
+  {% endfor %}
+
+
+Conoce ConquerBlocks
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends "layout-base.html" %}
+
+{% block head_title %}Search{% endblock %}
+
+{% block page_tittle %}Bienvenido a nuestra página de búsqueda{% endblock %}
+
+{% block page_content %}
+  <p>Esta es la página para buscar</p>
+  <div>
+    <form action="" method="get">
+        <h2>Busca cursos</h2>
+        <div>
+            <label for="">Introduce cualquier cadena de texto</label>
+            <input type="text" name="q" required value="{% if request.GET %}{{ request.GET.q }}{% endif %}">
+            <button>Buscar</button>
+        </div>
+    </form>
+  </div>
+  {% if request.GET %}
+    <div>
+      <h3>Resultados para la búsqueda con {{ request.GET.q }}</h3>
+      {% if courses %}
+      <ul>
+        {% for course in courses %}
+        <li>{{ course.title }}</li>
+        {% endfor %}
+      </ul>
+      {% else %}
+      <p>No hay cursos para esa búsqueda</p>
+      {% endif %}
+    </div>
+  {% endif %}
+{% endblock %}
