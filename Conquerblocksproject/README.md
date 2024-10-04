@@ -1,34 +1,24 @@
+# Proyecto: Página Web de la Entidad Educativa "Conquerblocks"
 
-![Portada del Proyecto](https://imgur.com/9c9tDle.jpg)
-¡Bienvenido! 🚀 Este repositorio está dedicado a almacenar los proyectos y ejercicios que realizo mientras aprendo y perfecciono mis habilidades en Django, un increíble framework web en Python 🐍.
+## Descripción
+Este proyecto consiste en una página web para la "Conquerblocks", una institución educativa dedicada a proporcionar una educación integral y de calidad. La página tiene como objetivo informar a los estudiantes, padres y miembros de la comunidad sobre los programas académicos, eventos y actividades de la escuela.
 
-Se que se podría incluir en el repositorio de Python pero quiero dividirlo. Ya que hay proyectos que únicamente los hago para practicar DJANGO y otros python y django que esos iran en los dos repositrios.
+## Características
+- **Diseño Responsivo**: La página se adapta a diferentes dispositivos y tamaños de pantalla.
+- **Sección de Programas Académicos**: Información sobre los diferentes niveles educativos y programas ofrecidos.
+- **Calendario de Eventos**: Un calendario interactivo que muestra eventos escolares, reuniones y actividades.
+- **Galería de Imágenes**: Imágenes de eventos pasados y actividades escolares.
+- **Formulario de Contacto**: Permite a los usuarios enviar consultas y obtener más información.
 
-📂 ¿Qué Contiene Este Repositorio?
-Actualmente, el repositorio incluye:
+## Tecnologías Utilizadas
+- **HTML**: Estructura básica de la página.
+- **PYTHON**
+- **Django**: Framework para el desarrollo del lado del servidor (si aplica).
 
-🛠️ [LibraryControl]:
-Un pequeño proyecto de gestión de una biblioteca con libros, autores, préstamos, etc.
-🔮 Lo Que Va a Contener
-En el futuro, este repositorio se irá llenando de más contenido, como:
+## Instalación
+Para ejecutar este proyecto localmente, sigue estos pasos:
 
-🚀 Nuevos Proyectos: Más aplicaciones completas que demuestran diferentes funcionalidades y características de Django.
-📚 Ejercicios: Ejercicios específicos diseñados para practicar conceptos clave de Django, como manejo de bases de datos 🗄️, autenticación 🔐, manejo de formularios 📝, y mucho más.
-⚙️ Instalación
-Si deseas clonar el repositorio y ejecutar los proyectos en tu máquina local 💻, sigue estos pasos:
-1-.Clona el repositorio:
-  git clone https://github.com/tuusuario/nombre-del-repositorio.git
-  cd nombre-del-repositorio
-2-.Crea y activa un entorno virtual:
-  python -m venv venv
-  source venv/bin/activate  # En Windows usa `venv\Scripts\activate`
-3-.Instala las dependencias:
-  pip install -r requirements.txt
-4-.Ejecuta el servidor de desarrollo:
-  python manage.py runserver
-🤝 Contribuciones
-¡Las contribuciones son más que bienvenidas! 🎉 Si tienes sugerencias 💡, detectas errores 🐞 o deseas colaborar 🤝, no dudes en abrir un issue o enviar un pull request.
+1. **Clona el repositorio**:
 
-📬 Contacto
-Si tienes preguntas ❓ o sugerencias 💭, puedes contactarme a través de danielabrador47@gmail.com. ¡Estoy aquí para ayudarte! 😊
-
+   ```bash
+   git clone https://github.com/daniilabradorr/DJANGO/Conquerblocksproject.git
