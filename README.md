@@ -19,7 +19,7 @@ En el futuro, este repositorio se irá llenando de más contenido, como:
 ⚙️ Instalación
 Si deseas clonar el repositorio y ejecutar los proyectos en tu máquina local 💻, sigue estos pasos:
 1-.Clona el repositorio:
-  git clone https://github.com/tuusuario/nombre-del-repositorio.git
+  git clone 
   cd nombre-del-repositorio
 2-.Crea y activa un entorno virtual:
   python -m venv venv
