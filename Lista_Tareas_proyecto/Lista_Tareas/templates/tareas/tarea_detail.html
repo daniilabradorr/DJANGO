@@ -1,0 +1,46 @@
+{% extends "general/layout.html" %}
+
+{% block title %}Detalle de la Tarea{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1 class="mb-4 text-center">Detalle de la Tarea</h1>
+
+    <div class="card">
+        <div class="card-header">
+            <h2>{{ tarea.titulo }}</h2>
+        </div>
+        <div class="card-body">
+            <p><strong>Descripción:</strong> {{ tarea.descripcion }}</p>
+            <p><strong>Prioridad:</strong> 
+                {% if tarea.prioridad == 'A' %}
+                    <span class="badge bg-danger">Alta</span>
+                {% elif tarea.prioridad == 'M' %}
+                    <span class="badge bg-warning">Media</span>
+                {% else %}
+                    <span class="badge bg-success">Baja</span>
+                {% endif %}
+            </p>
+            <p><strong>Completada:</strong> 
+                {% if tarea.completada %}
+                    <span class="badge bg-success">Sí</span>
+                {% else %}
+                    <span class="badge bg-secondary">No</span>
+                {% endif %}
+            </p>
+            <p><strong>Fecha de Creación:</strong> {{ tarea.fecha_creacion|date:"d M Y H:i" }}</p>
+            {% if tarea.fecha_completada %}
+                <p><strong>Fecha de Completada:</strong> {{ tarea.fecha_completada|date:"d M Y H:i" }}</p>
+            {% endif %}
+        </div>
+        <div class="card-footer text-end">
+            <a href="{% url 'editar_tarea' tarea.id %}" class="btn btn-warning">Editar</a>
+            <form method="post" action="{% url 'eliminar_tarea' tarea.id %}" class="d-inline">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-danger" onclick="return confirm('¿Estás seguro de que deseas eliminar esta tarea?');">Eliminar</button>
+            </form>
+            <a href="{% url 'lista_tareas' %}" class="btn btn-secondary">Volver a la Lista</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

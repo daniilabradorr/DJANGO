@@ -1,0 +1,41 @@
+{% extends "general/layout.html" %}
+
+{% block title %}Editar Tarea{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1 class="mb-4 text-center">Editar Tarea</h1>
+
+    <form method="post" action="{% url 'editar_tarea' tarea.id %}">
+        {% csrf_token %}
+        <div class="form-group mb-3">
+            <label for="titulo">Título de la tarea</label>
+            <input type="text" name="titulo" id="titulo" class="form-control" value="{{ form.titulo.value }}" required>
+        </div>
+
+        <div class="form-group mb-3">
+            <label for="prioridad">Prioridad</label>
+            <select name="prioridad" id="prioridad" class="form-select" required>
+                <option value="A" {% if form.prioridad.value == 'A' %}selected{% endif %}>Alta</option>
+                <option value="M" {% if form.prioridad.value == 'M' %}selected{% endif %}>Media</option>
+                <option value="B" {% if form.prioridad.value == 'B' %}selected{% endif %}>Baja</option>
+            </select>
+        </div>
+
+        <div class="form-group mb-3">
+            <label for="descripcion">Descripción</label>
+            <textarea name="descripcion" id="descripcion" class="form-control" rows="4">{{ form.descripcion.value }}</textarea>
+        </div>
+
+        <div class="form-check mb-3">
+            <input type="checkbox" name="completada" id="completada" class="form-check-input" {% if form.completada.value %}checked{% endif %}>
+            <label class="form-check-label" for="completada">¿Completada?</label>
+        </div>
+
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <button type="submit" class="btn btn-primary">Actualizar Tarea</button>
+            <a href="{% url 'lista_tareas' %}" class="btn btn-secondary">Cancelar</a>
+        </div>
+    </form>
+</div>
+{% endblock %}

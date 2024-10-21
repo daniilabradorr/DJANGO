@@ -1,0 +1,82 @@
+{% extends "general/layout.html" %}
+
+{% block title %}Lista de Tareas{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h1 class="mb-4">Lista de Tareas</h1>
+
+    <div class="mb-3">
+        <a href="{% url 'crear_tarea' %}" class="btn btn-primary">Añadir Nueva Tarea</a>
+    </div>
+
+    
+    
+    <form method="get" class="mb-3">
+        <div class="row">
+          <div class="col-md-3">
+            <label for="prioridad" class="form-label">Prioridad</label>
+            <select name="prioridad" id="prioridad" class="form-select">
+              <option value="">Todas</option>
+              <option value="A">Alta</option>
+              <option value="M">Media</option>
+              <option value="B">Baja</option>
+            </select>
+          </div>
+          <div class="col-md-3">
+            <label for="completada" class="form-label">Completada</label>
+            <select name="completada" id="completada" class="form-select">
+              <option value="">Todas</option>
+              <option value="true">Sí</option>
+              <option value="false">No</option>
+            </select>
+          </div>
+          <div class="col-md-3 align-self-end">
+            <button type="submit" class="btn btn-primary">Filtrar</button>
+          </div>
+        </div>
+    </form>
+
+    {% if tareas %}
+    <table class="table table-bordered">
+        <thead class="table-light">
+            <tr>
+                <th>ID</th>
+                <th>Tarea</th>
+                <th>Prioridad</th>
+                <th>Descripción</th>
+                <th>Completada</th>
+                <th>Opciones</th>  <!-- Nueva columna para las acciones -->
+            </tr>
+        </thead>
+        <tbody>
+            {% for tarea in tareas %}
+            <tr>
+                <td>{{ tarea.id }}</td>
+                <td>{{ tarea.titulo }}</td>
+                <td>{{ tarea.prioridad }}</td>
+                <td>{{ tarea.descripcion }}</td>
+                <td>{{ tarea.completada }}</td>
+                <td>
+                    <div class="text-center">  <!-- Centrar los botones -->
+                        
+                        <a href="{% url 'detalle_tarea' tarea.id %}" class="btn btn-info mb-1">Ver Detalle</a>  <!-- Botón para ver detalles -->
+                        <a href="{% url 'editar_tarea' tarea.id %}" class="btn btn-warning mb-1">Editar</a>
+                        <form method="post" action="{% url 'eliminar_tarea' tarea.id %}" style="display:inline;">
+                            {% csrf_token %}
+                            <button type="submit" class="btn btn-danger" onclick="return confirm('¿Estás seguro de que deseas eliminar esta tarea?');">Eliminar</button>
+                        </form>
+                    </div>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <div class="alert alert-info" role="alert">
+        No hay tareas disponibles.
+    </div>
+    {% endif %}
+    
+</div>
+{% endblock %}

@@ -1,0 +1,178 @@
+/* static/css/style.css */
+
+/* Estilo general */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo del encabezado */
+header {
+    background-color: #4CAF50; /* Verde claro */
+    color: #fff;
+    padding: 5px; /* Compacto */
+    display: flex; /* Flexbox para alinear elementos */
+    align-items: center; /* Centrar verticalmente */
+    justify-content: space-between; /* Espaciado entre elementos */
+}
+
+/* Logo */
+.logo {
+    height: 50px; /* Altura del logo */
+    margin-right: 15px; /* Espacio entre el logo y el menú */
+}
+
+/* Contenedor de la página de inicio */
+.home-container {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Estilo para el mensaje de autenticación */
+.auth-prompt {
+    margin: 20px 0;
+    padding: 10px;
+    border: 2px solid #007bff; /* Color del borde */
+    border-radius: 8px; /* Bordes redondeados */
+    background-color: #e7f0ff; /* Color de fondo */
+    display: inline-block; /* Tamaño del contenedor */
+}
+
+.auth-prompt p {
+    font-size: 18px; /* Tamaño de la fuente */
+}
+
+/* Estilo para enlaces de autenticación */
+.auth-link {
+    color: #007bff; /* Color del enlace */
+    text-decoration: none; /* Sin subrayado */
+    font-weight: bold; /* Negrita */
+}
+
+.auth-link:hover {
+    text-decoration: underline; /* Subrayado al pasar el ratón */
+}
+
+/* Estilo para sección de información */
+.info-section {
+    margin: 20px 0;
+}
+
+/* Estilo para imágenes en la página de inicio */
+.image-section img {
+    width: 300px;
+    height: auto;
+    margin: 10px;
+}
+
+/* Estilo del pie de página */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Estilos para el formulario de login */
+.login-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.login-container h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Imagen del banner */
+.login-container .banner-section img {
+    width: 150px; /* Imagen más pequeña */
+    height: auto;
+    margin: 20px 0;
+}
+
+/* Estilos del formulario */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    font-size: 1em;
+}
+
+/* Estilo para el botón de iniciar sesión */
+.btn-primary {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #45a049;
+}
+
+/* Sección de beneficios de la app */
+.benefits-section {
+    display: flex;
+    flex-wrap: wrap; /* Cambia según el tamaño de pantalla */
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+/* Estilo de los elementos de beneficios */
+.benefit-item {
+    flex: 1 1 calc(33.333% - 20px); /* Tres columnas en pantallas grandes */
+    color: rgba(255, 255, 255, 0.9); /* Opacidad del texto */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Sombra al texto */
+    padding: 20px;
+    text-align: center;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+/* Ajustar el tamaño del texto en beneficios */
+.benefit-item h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.benefit-item p {
+    font-size: 1em;
+}
+
+/* Media query para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .benefits-section {
+        flex-direction: column; /* Apilar beneficios */
+    }
+
+    .benefit-item {
+        flex: 1 1 100%; /* 100% del ancho en móviles */
+        margin: 10px 0; /* Margen entre columnas */
+    }
+
+    .banner-section img {
+        width: 100px; /* Reducir tamaño del banner en móvil */
+    }
+}
+
+/* Para quitar los puntos de la lista en "¿Qué puedes hacer aquí?" */
+.no-bullets {
+    list-style-type: none; /* Quitar puntos */
+    padding: 0; /* Elimina sangría */
+    margin: 0; /* Elimina margen */
+}

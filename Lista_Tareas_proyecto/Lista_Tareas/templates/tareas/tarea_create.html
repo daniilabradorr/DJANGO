@@ -1,0 +1,42 @@
+{% extends "general/layout.html" %}
+
+{% block title %}Crear Nueva Tarea{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1 class="mb-4 text-center">Crear Nueva Tarea</h1>
+
+    <form method="post" action="{% url 'crear_tarea' %}">
+        {% csrf_token %}
+        <div class="form-group mb-3">
+            <label for="titulo">Título de la tarea</label>
+            <input type="text" name="titulo" id="titulo" class="form-control" placeholder="Escribe el título" required>
+        </div>
+
+        <div class="form-group mb-3">
+            <label for="prioridad">Prioridad</label>
+            <select name="prioridad" id="prioridad" class="form-select" required>
+                <option value="">Selecciona la prioridad</option>
+                <option value="A">Alta</option>
+                <option value="M">Media</option>
+                <option value="B">Baja</option>
+            </select>
+        </div>
+
+        <div class="form-group mb-3">
+            <label for="descripcion">Descripción</label>
+            <textarea name="descripcion" id="descripcion" class="form-control" rows="4" placeholder="Escribe una breve descripción"></textarea>
+        </div>
+
+        <div class="form-check mb-3">
+            <input type="checkbox" name="completada" id="completada" class="form-check-input">
+            <label class="form-check-label" for="completada">¿Completada?</label>
+        </div>
+
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <button type="submit" class="btn btn-primary">Crear Tarea</button>
+            <a href="{% url 'lista_tareas' %}" class="btn btn-secondary">Cancelar</a>
+        </div>
+    </form>
+</div>
+{% endblock %}

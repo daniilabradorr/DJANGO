@@ -1,0 +1,35 @@
+{% extends "general/layout.html" %}
+
+{% load static %}
+
+{% block title %}Página de Inicio{% endblock %}
+
+{% block content %}
+<div class="home-container">
+    <h1>Bienvenido a la Aplicación de Tareas</h1>
+    
+    {% if user.is_authenticated %}
+        <p>Hola, {{ user.username }}! Puedes gestionar tus tareas a continuación.</p>
+        <a href="{% url 'logout' %}" class="btn btn-danger">Cerrar sesión</a> <!-- Botón de cerrar sesión -->
+    {% else %}
+        <div class="auth-prompt">
+            <p>Por favor, <a href="{% url 'login' %}" class="auth-link">inicia sesión</a> o <a href="{% url 'registro' %}" class="auth-link">regístrate</a>.</p>
+        </div>
+    {% endif %}
+    
+    <div class="info-section">
+        <h2>¿Qué puedes hacer aquí?</h2>
+        <ul class= "no-bullets"> <!-- Añadida la clase para quitar los puntos -->
+            <li>✅ Crear nuevas tareas</li>
+            <li>✏️ Actualizar tareas existentes</li>
+            <li>🗑️ Eliminar tareas que ya no necesitas</li>
+            <li>✔️ Marcar tareas como completadas</li>
+        </ul>
+    </div>
+    
+    <section class="image-section">
+        <img src="{% static 'images/logo_aplicacion.png' %}" alt="Gestión de Tareas">
+        <img src="{% static 'images/ilustracion_poder_hacer.png' %}" alt="Ejemplo de Tarea">
+    </section>
+</div>
+{% endblock %}

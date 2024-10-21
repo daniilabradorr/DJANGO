@@ -1,0 +1,38 @@
+{% load static %}
+<header class="bg-primary text-white d-flex justify-content-between align-items-center p-2">
+    <div class="logo-container">
+        <a href="{% url 'home' %}">
+            <img src="{% static 'images/logo_principal_aplicacion.png' %}" alt="Logo" style="height: 60px;"> <!-- Ajusta el tamaño aquí -->
+        </a>
+    </div>
+    <nav class="mx-auto">
+        <ul class="nav">
+            <li class="nav-item">
+                <a class="nav-link text-white" href="{% url 'home' %}">Inicio</a>
+            </li>
+            {% if user.is_authenticated %}
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="{% url 'lista_tareas' %}">Tareas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="{% url 'logout' %}">Cerrar Sesión</a>
+                </li>
+            {% else %}
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="{% url 'login' %}">Iniciar Sesión</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="{% url 'registro' %}">Registrarse</a>
+                </li>
+            {% endif %}
+        </ul>
+    </nav>
+    <div class="social-container d-flex align-items-center">
+        <a href="https://www.youtube.com/@DanielLabradorBenito" class="mx-2" target="_blank">
+            <i class="fab fa-youtube fa-2x text-white"></i> <!-- Icono de YouTube -->
+        </a>
+        <a href="https://www.linkedin.com/in/daniel-labrador-benito-6b794727b/" class="mx-2" target="_blank">
+            <i class="fab fa-linkedin fa-2x text-white"></i> <!-- Aumenta el tamaño aquí -->
+        </a>
+    </div>
+</header>
